@@ -1,0 +1,484 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.consolas {
+    font-family: monospace;
+}
+
+@font-face {
+    font-family: 'nodestructivo';
+    src: url(/assets/NODESTRUCTIVO.otf);
+}
+
+body{ 
+    overflow-x: hidden;
+    font-family: 'nodestructivo';
+    background: radial-gradient(ellipse at center, white, #BFBFBF);
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'nodestructivo';
+}
+
+p {
+    font-family: monospace;
+    font-weight: light;
+}
+
+@media (min-width: 780px){
+
+    body {
+        font-family: 'nodestructivo';
+    }
+
+    /*NAV-MENU*/
+    header{
+        font-size: 1.7rem;
+    }
+
+    nav{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background: url(/images/nav-menu.png) center top;
+        background-size: 85%;
+        background-repeat: no-repeat;
+    }
+
+    nav ul{
+        list-style: none;
+        width: 67%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .title{
+        text-align: center;
+        padding: 1rem 5rem;
+    }
+
+    li > a.logo-nav{
+        padding: 0;
+    }
+
+    .logo-nav {
+        width: 7rem;
+    }
+
+    header a{
+        text-decoration: none;
+        color: black;
+        transition: color 0.3s ease;
+    }
+
+    header a:hover {
+        color:#00ffb0;
+    }
+
+    /*CAROUSEL*/
+    .carousel-section {
+        padding-top: 3.5rem;
+    }
+
+    .carousel{
+        background: url(../images/nd-1.jpg) center;
+        background-size: cover;
+        padding: 5rem 0;
+        border-radius: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 8rem;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .carousel p {
+        color: #f4f4f4;
+        line-height: 0.5;
+        font-size: 100px;
+        font-family: 'nodestructivo';
+        width: 57%;
+        text-align: left;
+    }
+
+    .carousel a {
+        background: #00ffb0;
+        padding: 1rem 2rem;
+        text-decoration: none;
+        color: black;
+        font-size: 30px;
+        border-radius: 40px;
+        margin-top: 3rem;
+        transition: box-shadow 0.3s ease;
+    }
+
+    .carousel a:hover {
+        box-shadow: 0 0 20px rgba(0, 255, 174, 0.5);
+    }
+
+    /*.prev, .next{
+        position: absolute;
+        bottom: 1%;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        background: rgba(0,0,0,0);
+        color: #00ffb0;
+        border: none;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .prev{
+        left: 0;
+    }
+
+    .next{
+        right:0;
+    }*/
+
+    /*----INFO----*/
+
+    .info {
+        display: flex;
+        justify-content: center;
+        margin: 5rem;
+    }
+
+    .info h1 {
+        text-align: center;
+        letter-spacing: 0.5rem; 
+        word-spacing: 1rem;
+        font-size: 2.1rem;  
+    }
+
+    .info p {
+        font-size: 1.2rem;
+    }
+
+    .metodos {
+        width: 50%;
+        text-align: center;
+    }
+
+    .tecnicas {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+    }
+
+    .tecnica{
+        margin-top: 3rem;
+    }
+
+    .tecnica-img {
+        width: 10rem;
+        filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
+        transition: filter 0.3s ease;
+    }
+
+    .tecnica-img:hover {
+        filter: drop-shadow(0 0 10px hsla(161, 100%, 50%, 0.5));
+    }
+
+    .cap-ase {
+        width: 50%;
+        text-align: center;
+    }
+
+    /* .numero-aj {
+        display: inline-block;
+        font-family: consolas;
+        vertical-align: -1px;
+        transform: scaleY(0.6);
+        font-style: bold;
+    } */
+
+
+    .capacitaciones li, .asesorias p {
+        font-size: 1rem;
+    }
+
+    .cap-ase h2 {
+        text-align: left;
+        font-weight: normal;
+    }
+
+    .capacitaciones ul {
+        list-style-position: inside;
+        display: grid;
+        gap: 0;
+    }
+
+    .capacitaciones li {
+        font-family: monospace;
+        margin-top: 0.5rem;
+        letter-spacing: 0.1rem;
+        word-spacing: 0.3rem;
+        text-align: left;
+    }
+
+    .adiestramiento {
+        text-align: right;
+        font-family: 'nodestructivo';
+    }
+
+    .asesorias {
+        margin-top: 2.5rem;
+    }
+
+    .asesorias p {
+        text-align: left;
+        font-size: 1.2rem;
+    }
+
+    .asesorias p{
+        margin-top: 1rem;
+        margin-bottom: 1.2rem;
+    }
+
+    /*----CITA----*/
+
+    .cita {
+        display: grid;
+        text-align: center;
+        font-size: 1.7rem;
+    }
+
+    .cita p {
+        font-family: 'nodestructivo';
+    }
+
+    .cita a {
+        background-color: #00ffb0;
+        border-radius: 25px;
+        padding: 1rem 2rem;
+        text-decoration: none;
+        color: black;
+        margin: 2rem 50rem;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        transition: box-shadow 0.3s ease;
+    }
+
+    .cita a:hover {
+        box-shadow: 0 0 20px rgba(0, 255, 174, 1);
+        background-color: #00ffae;
+    }
+
+    /*----SHOP----*/
+    .shop {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .shop img{
+        margin-top: 3rem;
+    }
+
+    /*----SOMOS----*/
+
+    .somos-contacto {
+        display: flex;
+        margin: 3rem 8rem;
+    }
+
+    .somos h1{
+        font-size: 5rem;
+    }
+
+    .somos p{
+        font-size: 1.2rem;
+    }
+
+    .somos {
+        width: 50%;
+        text-align: justify;
+        margin: 2rem;
+    }
+
+    /*----FORM----*/
+
+    .contacto {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        padding: 2rem;
+    }
+
+    .contacto h1{
+        margin:0 0 1rem 1rem;
+        font-size: 4rem;
+    }
+
+    .contacto form {
+        display: grid;   
+    }
+
+    input, textarea {
+        border-radius: 30px;
+        padding: 0.8rem;
+        font-family: monospace;
+        font-size: 1.2rem;
+        border-style: hidden;
+        box-shadow: 0 0 20px rgb(0, 255, 174);
+        margin-bottom: 2rem;
+        background-color: #ffffff36;
+    }
+
+    textarea {
+        height: 13rem;
+        resize: none;
+    }
+
+    input:focus-visible, textarea:focus-visible {
+        outline: none;
+    }   
+
+    .contacto button {
+        outline: none;
+        border-style: none;
+        box-shadow: 0 0 20px rgba(0, 255, 174, 0.5);
+        background-color: #00ffae;
+        color: #000000;
+        border-radius: 20px;
+        padding: 0.5rem 0.5rem;
+        font-family: 'nodestructivo';
+        font-size: 1.7rem;
+        margin: 0 12rem;
+    }
+
+    .contacto button:hover {
+        cursor:pointer;
+    }
+    
+    .success {
+        font-family: consolas;
+        text-align: center;
+        margin-top: 10px;
+        color: #000000;
+        filter: drop-shadow(0 0 1px hsla(161, 100%, 50%, 0.61));
+    }
+
+    /*----PREGUNTAS-FRECUENTES----*/
+
+    .p-frecuentes {
+        display: flex;
+        margin-top: 6rem;
+        background-color: #00000017;
+    }
+
+    .p-frecuentes div {
+        margin: 4rem 8rem;
+        text-align: center;
+    }
+
+    .p-frecuentes a {
+        text-decoration: none;
+        color: rgb(0, 255, 136);
+        filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.61));
+    }
+
+    /*----INGRESA----*/
+
+    .ingresa {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(54, 54, 54, 0.466);
+        color: #00ffb0;
+        margin: 4rem;
+        padding: 12rem 0;
+        border-radius: 15px;
+    }
+
+    .cert-chk {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .cert-chk form {
+        display: grid;
+    }
+
+    .cert-chk form input {
+        box-shadow: 0 0 15px hsla(161, 100%, 50%, 0.5);
+    }
+    
+    .cert-info h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .cert-info img {
+        width: 150px;
+        margin-bottom: 4rem;
+    }
+    
+    .cert-chk button {
+        margin: 0 10rem;
+        padding: 0.5rem 0;
+        border-radius: 15px;
+        outline: none;
+        border-style: none;
+        font-family: monospace;
+        background-color: #00ffb0;
+        box-shadow: 0 0 20px hsla(161, 100%, 50%, 0.5);
+    }
+
+    .cert-chk button:hover {
+        cursor: pointer;
+        background-color: hsla(161, 100%, 85%, 0.952);
+    }
+
+    /*----FOOTER----*/
+
+    footer {
+        display: grid;
+        background-color: #131212;
+        text-align: center;
+        color: #f4f4f4;
+    }
+
+    footer p {
+        background-color: #ffffff6e;
+        padding: 1rem;
+    }
+
+    .footer{
+        display: flex;
+        text-align: left;
+        font-family: monospace;
+        padding: 3rem 8rem;
+        font-size: 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer img {
+        width: 5rem;
+    }
+
+    .footer a {
+        text-decoration: none;
+        color: #00ffb0;
+    }
+
+    .footer ul {
+        list-style: none;
+    }
+    
+    .footer li {
+        margin-bottom: 1rem;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        margin: 1rem 5rem;
+    }
+}
